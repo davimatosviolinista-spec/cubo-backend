@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 mercadopago.configure({
-    access_token: "SEU_ACCESS_TOKEN_AQUI"
+    access_token: process.env.MP_TOKEN
 });
 
 app.post("/criar-pagamento", async (req, res) => {
